@@ -1,0 +1,89 @@
+<head>
+</head>
+
+<template name="mainLayout">
+
+    <div id="main-loader"></div>
+
+    <!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#descModal">-->
+        <!--Launch demo modal-->
+    <!--</button>-->
+
+    <div class="modal fade" id="descModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Это модальное окно!! Йоу</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text"/><br/><input type="text"/><br/>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Список ТСЖ</h4>
+                </div>
+                <div class="modal-body">
+                    {{>listCompanies}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header>
+        <div class="container">
+            <a id="logo" href="/">
+
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/info/advantages">О проекте</a></li>
+                    <!--&lt;!&ndash;<li><a href="" id="toggleList">ТСЖ</a></li>&ndash;&gt;-->
+                    <!--<li><a href="/info/tenant">ЖСК и ЖК</a></li>-->
+                    <!--<li><a href="/info/tenant">Управляющие организации</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrap _loaded">
+        {{>yield}}
+    </div>
+
+
+    <footer>
+
+        <p class="container"><span>2014 МойДом.</span> Все права защищены в связи со ст. 134 УК РФ.</p>
+    </footer>
+    
+</template>
+
+
+
+<template name="listCompanies">
+
+                    <ul>
+                        {{#each companies}}
+                        <li><a href="/{{alias}}">{{name}}</a></li>
+                        {{/each}}
+                    </ul>
+
+</template>

@@ -1,0 +1,64 @@
+.why-we{
+   padding: 30px 0 40px 0;
+  .circle{
+    width: 170px;
+    height: 170px;
+    .rounded(100px);
+    border: 1px solid @mainColor;
+    color: @mainColor;
+    margin: 30px auto;
+    line-height: 225px;
+    text-align: center;
+    i{
+      font-size: 80px;
+
+    }
+  }
+  h4, p{
+    text-align: center;
+  }
+  h4{
+    color: @secColor;
+  }
+}
+
+.why-better{
+  padding: 30px 0 40px 0;
+  background: @gray-lighter;
+  .row{
+    margin-top: 30px;
+    div:nth-child(1){
+      text-align: right;
+    }
+    i{
+      font-size: 50px;
+      color: @mainColor;
+    }
+    p{
+      font-size: 24px;
+      color: @gray;
+    }
+  }
+}
+
+.service{
+  padding: 30px 0 40px 0;
+}
+
+.price{
+  padding: 30px 0 40px 0;
+  background: @gray-lighter;
+  .thumbnail{
+    padding: 20px;
+    background: white;
+  }
+}
+
+.lead{
+  padding: 30px 0 40px 0;
+  *{
+    text-align: center;
+  }
+
+}
+

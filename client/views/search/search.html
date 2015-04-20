@@ -1,0 +1,105 @@
+<template name="search">
+
+    <header class="top-main">
+
+        <div>
+
+            <div class="logo"></div>
+
+            <div class="ovrl"></div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><div>1</div><p>Все ТСЖ и ЖСК в одном месте!</p></div>
+                <div class="col-md-4"><div>2</div><p>Современный удобный поиск, вся важная информация</p></div>
+                <div class="col-md-4"><div>3</div><p>Удобная система взаимодействия</p></div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="search-string">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-10">
+
+                    <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-control input-lg" name="" id="city-input">
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="msk">Москва</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <input id="street-input" class="form-control input-lg" type="text" placeholder="улица"/>
+                    </div>
+                    <div class="col-md-2"><input id="house-input" class="form-control input-lg" type="text" placeholder="дом"/></div>
+                    <div class="col-md-2"><input id="corpus-input" class="form-control input-lg" type="text" placeholder="корпус"/></div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2"><button id="search" class="btn btn-success btn-lg">поиск</button></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="search-map">
+
+    </section>
+
+    <section class="main-info">
+
+        <div class="container">
+
+            {{#if result}}
+
+            <h3>{{result.name}}</h3>
+
+            <hr/>
+
+            {{#with result.mainInfo}}
+            <div class="row">
+                <aside class="col-md-3">Адрес:</aside>
+                <div class="col-md-9"><p>{{address}}</p></div>
+            </div>
+            <div class="row">
+                <aside class="col-md-3">Телефон:</aside>
+                <div class="col-md-9"><p>{{getPhones phone}}</p></div>
+            </div>
+            <div class="row">
+                <aside class="col-md-3">Руководитель:</aside>
+                <div class="col-md-9"><p>{{head}}</p></div>
+            </div>
+            <div class="row">
+                <aside class="col-md-3">Режим работы:</aside>
+                <div class="col-md-9"><p>{{hours}}</p></div>
+            </div>
+            {{/with}}
+
+            <div class="row">
+                <aside class="col-md-3"></aside>
+                <div class="col-md-9">
+                    <a href="/{{result.alias}}">Подробнее</a>
+                </div>
+            </div>
+
+
+            {{else}}
+
+
+            {{/if}}
+
+        </div>
+
+    </section>
+
+</template>

@@ -1,0 +1,17 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+coffeescript
+underscore
+less
+simison:bootstrap3-less
+cmather:iron-router
+pfafman:font-awesome-4
+kidovate:pnotify
+mrt:googlemaps
+aldeed:collection2
+noorderstorm:stellar
+
