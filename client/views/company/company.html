@@ -26,7 +26,7 @@
                     <nav class="company-nav">
                         <ul>
                             <li><a href="">Cписок домов</a></li>
-                            <li><a href="">Инфа 1</a></li>
+                            <li><a href="/company/table">Инфа 1</a></li>
                             <li><a href="">Инфа 2</a></li>
                             <li><a href="">Инфа 3</a></li>
                             <li><a href="">Инфа 4</a></li>
@@ -37,66 +37,7 @@
 
                 <div class="main col-md-9">
 
-                    <h3>Основная информация</h3>
-
-                    <hr/>
-
-                    {{#with mainInfo}}
-                    <div class="row">
-                        <aside class="col-md-3">Адрес:</aside>
-                        <div class="col-md-9"><p>{{address}}</p></div>
-                    </div>
-                    <div class="row">
-                        <aside class="col-md-3">Телефон:</aside>
-                        <div class="col-md-9"><p>{{getPhones phone}}</p></div>
-                    </div>
-                    <div class="row">
-                        <aside class="col-md-3">Руководитель:</aside>
-                        <div class="col-md-9"><p>{{head}}</p></div>
-                    </div>
-                    <div class="row">
-                        <aside class="col-md-3">Режим работы:</aside>
-                        <div class="col-md-9"><p>{{hours}}</p></div>
-                    </div>
-                    <div class="row">
-                        <aside class="col-md-3"></aside>
-                        <div class="span9">
-                            <button class="bordered">Обращение</button>
-                        </div>
-                    </div>
-                    {{/with}}
-                    <hr/>
-
-                    <h3>Объявления</h3>
-
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <h5>25.08.2015</h5>
-                            <h4>ДЛЯ ЖИЛЬЦОВ СРОЧНО!</h4>
-
-                            <p>С 13:00 до 15:00 не будет горячей воды, просьба запастись обогревателями</p>
-                        </li>
-                        <li class="list-group-item">
-                            <h5>25.08.2015</h5>
-                            <h4>ДЛЯ ЖИЛЬЦОВ СРОЧНО!</h4>
-
-                            <p>С 13:00 до 15:00 не будет горячей воды, просьба запастись обогревателями</p>
-                        </li>
-                        <li class="list-group-item">
-                            <h5>25.08.2015</h5>
-                            <h4>ДЛЯ ЖИЛЬЦОВ СРОЧНО!</h4>
-
-                            <p>С 13:00 до 15:00 не будет горячей воды, просьба запастись обогревателями</p>
-                        </li>
-                        <li class="list-group-item">
-                            <h5>25.08.2015</h5>
-                            <h4>ДЛЯ ЖИЛЬЦОВ СРОЧНО!</h4>
-
-                            <p>С 13:00 до 15:00 не будет горячей воды, просьба запастись обогревателями</p>
-                        </li>
-                        <li class="list-group-item"><a href="">АРХИВ</a></li>
-                    </ul>
-
+                    {{>yield}}
 
                 </div>
 
@@ -130,119 +71,6 @@
     <!--<div id="main-tab" class="info-cont">-->
 
     <!--<div class="container">-->
-
-    <!--<table class="table table-hover">-->
-
-    <!--<thead>-->
-    <!--<tr>-->
-    <!--<td>Имя</td>-->
-    <!--<td>Статья</td>-->
-    <!--<td>Расходы-->
-    <!--</td>-->
-    <!--<td>Приходы</td>-->
-    <!--</tr>-->
-    <!--</thead>-->
-
-    <!--<tbody>-->
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-
-    <!--<tr>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit.</td>-->
-    <!--<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa rem-->
-    <!--reprehenderit sed sunt.-->
-    <!--</td>-->
-    <!--<td>Lorem ipsum dolor sit amet.</td>-->
-    <!--</tr>-->
-
-    <!--</tbody>-->
-
-    <!--</table>-->
 
     <!--</div>-->
 

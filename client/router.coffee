@@ -25,7 +25,8 @@ Router.map ->
 
   @route 'company', {
     path: '/:alias'
-    template: 'company'
+    layoutTemplate: 'company'
+    template: '_mainPage'
     waitOn: ->
       Meteor.subscribe 'companies'
     data: ->
@@ -41,5 +42,17 @@ Router.map ->
   @route 'tenant', {
     path: 'info/tenant'
     template: 'tenant'
+  }
+
+  @route 'table', {
+
+    path: 'company/table'
+    layoutTemplate: 'company'
+    template: '_table'
+    waitOn: ->
+      Meteor.subscribe 'companies'
+    data: ->
+      company = Companies.findOne {'alias': @params.alias}
+
   }
 
